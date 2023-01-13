@@ -1,0 +1,497 @@
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Teko', sans-serif;
+    background-color: rgb(37, 37, 37);
+}
+
+/* HEADER - ELEMETOR SELECTION - SLIDER */
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	25% { transform: translateX(0); }
+
+	30% { transform: translateX(-100%); }
+	50% { transform: translateX(-100%); }
+
+	55% { transform: translateX(-200%); }
+	75% { transform: translateX(-200%); }
+
+	80% { transform: translateX(-300%); }
+	100% { transform: translateX(-300%); }
+
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.slider {
+	position: relative;
+}
+
+/* LOGO Y ELEMENTOS DE SELECCION */
+
+.body-elementor {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+.body-elementor-2 {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.elementor-section {
+    width: max-content;
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    z-index: 100; /* SUPERPOSICION DEL ELEMENTOR SECTION */
+}
+
+.elementor-section-2 {
+    width: 100%;
+    height: max-content;
+    position: relative;
+    margin: 0 auto;
+    background-image: url(imagenes/background-elementor-section.jpg);
+    background-position: 0% 15%;
+}
+
+.logo {
+    position: relative;
+    width: max-content;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.elementor-section nav, .elementor-section-2 nav {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-shadow: 1px 1px black;
+}
+
+.elementor-section nav li, .elementor-section-2 nav li{
+    display: inline;
+    margin: 0 25px 0 25px;
+}
+
+.elementor-section nav a, .elementor-section-2 nav a {
+    text-transform: uppercase;
+    font-family: teko;
+    color: white;
+    font-weight: bold;
+    font-size: 45px;
+    text-decoration: none;
+}
+
+.elementor-section nav a:hover, .elementor-section-2 nav a:hover {
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+.slides {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+
+.slide {
+	width: 100vw;
+	flex-shrink: 0;
+	animation-name: slide;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.slide img {
+	width: 100%;
+    height: 800px;
+	vertical-align: top;
+    filter: brightness(0.5);
+}
+
+.slide a {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+
+.caption {
+	color: #96885F;
+	text-shadow: 1px 1px white;
+	font-size: 65px;
+	position: absolute;
+    z-index: 50;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+}
+
+.slide:target {
+	animation-name: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+}
+
+.slider-controler {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+
+.slider-controler li {
+	margin: 0 0.5rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+}
+
+/* SOBRE LA BARBERIA */
+
+.principal {
+    width: 90%;
+    padding: 2em 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.img-corte {
+    width: 20%;
+    display: inline-block;
+}
+
+.cuerpo-principal {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 40px;
+    text-align: left;
+}
+
+.titulo-principal {
+    color: #96885F;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 0 1em;
+}
+
+.parrafo-principal p {
+    color: #8D8D8D;
+    margin: 0 0 15.2px;
+    line-height: 1.5em;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.parrafo-principal strong {
+    font-weight: bold;
+}
+
+.parrafo-principal em {
+    font-style: italic;
+}
+
+/* MAPA */
+
+.mapa {
+    padding: 3em 0;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+    color: #8D8D8D;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mapa-contenido {
+    width: 940px;
+    margin: 0 auto;
+}
+
+/* DIFERENCIALES */
+
+.diferenciales {
+    padding: 3em 0;
+}
+
+.contenido-diferenciales {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    color: #8D8D8D;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 20px;
+}
+
+.items {
+    line-height: 1.5;
+}
+
+.items::before {
+    content: "🟌";
+}
+
+.imagen-diferenciales {
+    width: 40%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 10px #000000;
+}
+
+.imagen-diferenciales:hover {
+    opacity: 30%;
+}
+
+/* VIDEO */
+
+.video {
+    width: 560px;
+    margin: 1em auto;
+    padding: 15px;
+}
+
+@media screen and (max-width:912px) {
+
+    .cuerpo-principal, .mapa-contenido, .contenido-diferenciales, .video, .elementor-section{
+        width: auto;
+    }
+
+    .lista-diferenciales, .imagen-diferenciales {
+        width: 90%;
+    }
+
+    .contenido-diferenciales {
+        text-align: center;
+    }
+    
+    .logo-header {
+        height: 80px;
+    }
+
+    .elementor-section nav li{
+        margin: 0 10px 0 10px;
+    }
+
+    .slide img {
+        height: 350px;
+    }
+
+    .body-elementor nav {
+        display: block;
+    }
+
+    .body-elementor nav a {
+        font-size: 15px;
+    }
+
+    .caption {
+        font-size: 15px;
+    }
+
+    .img-corte {
+        width: 50%;
+    }
+    
+}
+
+/* PRODUCTOS */
+
+.body-productos {
+    width: 100%;
+    text-align: center;
+}
+
+.productos {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    /* background-color: #CCCCCC; */
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    /* border-color: #000000;
+    border-width: 2px;
+    border-style: solid; */
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 45px; */
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.productos li:hover {
+    border-color: #C78C19;
+}
+
+.productos li:active {
+    border-color: #088C19;
+}
+
+.productos h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.productos li:hover h2 {
+    font-size: 30px;
+}
+
+.producto-descripcion {
+    font-size: 18px;
+}
+
+.producto-precio {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* FIN PRODUCTO */
+
+/* INICIO CONTACTO */
+
+form {
+    margin: 40px 80px;
+    color: #96885F;
+    text-transform: uppercase;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron {
+    display: block;
+    margin: 0 0 10px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0px;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: darkorange;
+    /* transform: scale(1.2) rotate(360deg); */
+    transform: scale(1.2);
+}
+
+table {
+    margin: 40px 80px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+
+td {
+    background-color: #FFFFFF;
+}
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 20px;
+}
+
+.body-buttons-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons-footer {
+    width: 940px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons-footer a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #314652;
+    color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    transition: all .4s ease-in-out;
+}
+
+.buttons-footer a:hover {
+    transform: scale(1.1);
+}
